@@ -1,0 +1,210 @@
+
+@import url('https://fonts.googleapis.com/css?family=Sarabun');
+
+body {
+    background-color: #000000;
+    font-family: 'Sarabun', sans-serif;
+}
+
+.section-container {
+    max-width: 800px;
+    min-height: 94.65vh;
+    margin: auto;
+    background-color: rgb(0, 0, 0);
+    padding: 20px;
+    border-left: 1px solid #585858;
+    border-right: 1px solid #585858;
+}
+
+/* การจัดวางฟอร์ม */
+.form-container {
+    border-bottom: 1px solid #585858;
+}
+.form-container, .threads-container {
+    margin: 20px 0;
+    background-color: #000000;
+    padding: 20px;
+}
+
+h2, h3 {
+    text-align: center;
+    color: #e4e4e4;
+    margin-bottom: 20px;
+}
+
+form input[type="text"], form textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+    color: #e4e4e4;
+    border: 1px solid #585858;
+    background-color: #080808;
+    border-radius: 10px;
+}
+
+form button {
+    padding: 10px 20px;
+    margin-top: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    font-size: 14px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #0056b3;
+}
+
+ul.threads-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+ul.threads-list li {
+    background-color: #000000;
+    border: 1px solid #585858;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 20px;
+    transition: transform 0.2s ease-in-out;
+}
+
+ul.threads-list li:hover {
+    transform: translateY(-5px);
+}
+
+ul.threads-list li strong {
+    font-size: 18px;
+    color: #007bff;
+}
+
+ul.threads-list li p {
+    margin: 10px 0;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #555;
+}
+
+ul.threads-list li em {
+    display: inline-block;
+    margin-top: 10px;
+    font-style: normal;
+    color: #888;
+    font-size: 14px;
+}
+
+ul.threads-list li small {
+    display: block;
+    margin-top: 5px;
+    color: #999;
+    font-size: 12px;
+}
+
+.thread-link {
+    text-decoration: none; /* ลบขีดเส้นใต้ */
+    color: #65b0ff; /* เปลี่ยนสีของลิงก์ (เปลี่ยนตามที่คุณต้องการ) */
+}
+
+.thread-link:hover {
+    text-decoration: underline; /* เพิ่มขีดเส้นใต้เมื่อเลื่อนเมาส์ */
+}
+
+textarea {
+    width: 100%; /* ให้กว้างเต็มที่ */
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: none; /* ปิดการปรับขนาดด้วยมือ */
+}
+
+textarea {
+    min-height: 100px; /* กำหนดความสูงขั้นต่ำ */
+    max-height: 400px; /* กำหนดความสูงสูงสุด */
+    overflow-y: hidden; /* ซ่อนแถบเลื่อนแนวตั้ง */
+}
+
+.pagination {
+    display: flex;
+    justify-content: center; /* จัดกลาง */
+    align-items: center; /* จัดแนวแนวตั้ง */
+    margin-top: 20px;
+}
+
+.pagination a,
+.pagination .current-page {
+    margin: 0 5px;
+    padding: 10px 15px; /* ขยายขนาดปุ่ม */
+    border: 2px solid #007BFF; /* กรอบสีน้ำเงิน */
+    border-radius: 5px; /* ทำมุมให้โค้ง */
+    text-decoration: none;
+    color: #007BFF; /* สีข้อความ */
+    background-color: #f8f9fa; /* สีพื้นหลัง */
+    transition: background-color 0.3s, color 0.3s; /* เพิ่มเอฟเฟกต์การเปลี่ยนสี */
+}
+
+.pagination .current-page {
+    font-weight: bold;
+    color: #ffffff; /* สีข้อความสำหรับหน้าปัจจุบัน */
+    background-color: #007BFF; /* สีพื้นหลังสำหรับหน้าปัจจุบัน */
+    border: 2px solid #007BFF; /* กรอบสำหรับหน้าปัจจุบัน */
+}
+
+.pagination a:hover {
+    background-color: #007BFF; /* เปลี่ยนพื้นหลังเมื่อเลื่อนเมาส์ */
+    color: #ffffff; /* เปลี่ยนสีข้อความเมื่อเลื่อนเมาส์ */
+}
+
+/* Dark Mode styles */
+.dark-mode .section-container {
+    background-color: #f9f9f9;
+    color: white;
+}
+
+.dark-mode .form-container {
+    background-color: #f9f9f9;
+}
+
+.dark-mode .threads-container {
+    background-color: #f9f9f9;
+}
+
+.dark-mode h2, h3 {
+    color: #3f3f3f;
+}
+
+.dark-mode form input[type="text"] {
+    color: #000000;
+    background-color: #f9f9f9;
+}
+
+.dark-mode form textarea  {
+    color: #000000;
+    background-color: #f9f9f9;
+}
+
+.dark-mode ul.threads-list li {
+    background-color: #f9f9f9;
+}
+
+.dark-mode .thread-link {
+    text-decoration: none;
+    color: #0b81ff;
+}
+
+.dark-mode ul.threads-list li small {
+    color: #2c2c2c;
+}
+
+/* Media Queries สำหรับหน้าจอเล็ก */
+@media (max-width: 768px) {
+    .section-container {
+        flex-direction: column;
+    }
+
+    .form-container, .threads-container {
+        margin: 10px 0;
+    }
+}

@@ -1,0 +1,11 @@
+# เปิดใช้งานการ rewrite URL
+RewriteEngine On
+
+# กฎการ rewrite URL ให้กระทู้มี URL สวยงาม
+RewriteRule ^view-thread/([0-9]+)$ /php/page/view_thread.php?thrid=$1 [L]
+
+# อนุญาตให้เข้าถึงไฟล์ PHP ในโฟลเดอร์นี้
+<FilesMatch "\.php$">
+    Order Allow,Deny
+    Allow from all
+</FilesMatch>
